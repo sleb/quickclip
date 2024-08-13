@@ -1,0 +1,70 @@
+{
+  "productName": "quickclip",
+  "version": "0.0.1",
+  "identifier": "rs.quickclip",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "url": "/",
+        "title": "QuickClip",
+        "decorations": false,
+        "alwaysOnTop": true,
+        "closable": false,
+        "width": 400,
+        "height": 300,
+        "visible": false,
+        "center": true
+      },
+      {
+        "label": "about",
+        "url": "/about",
+        "title": "About QuickClip",
+        "decorations": false,
+        "alwaysOnTop": true,
+        "closable": false,
+        "width": 300,
+        "height": 300,
+        "visible": false,
+        "center": true
+      },
+      {
+        "label": "prefs",
+        "url": "/prefs",
+        "title": "QuickClip Preferences",
+        "decorations": false,
+        "alwaysOnTop": true,
+        "closable": true,
+        "width": 300,
+        "height": 300,
+        "visible": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "trayIcon": {
+      "iconAsTemplate": true,
+      "iconPath": "icons/icon.png",
+      "id": "main"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
